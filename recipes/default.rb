@@ -44,3 +44,8 @@ template '/etc/apt/apt.conf.d/50unattended-upgrades' do
     :download_limit             => node['unattended-upgrades']['download_limit']
   )
 end
+
+cookbook_file '20auto-upgrades' do
+  path '/etc/apt/apt.conf.d/20auto-upgrades'
+  mode '0644'
+end
